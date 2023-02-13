@@ -17,7 +17,7 @@ if (!empty($_POST["btnmodificar"])) {
     $sql = $conexion->query("UPDATE persona SET nombre='$nombre', apellido='$apellido', dni=$dni, fecha='$fecha', correo='$correo' WHERE id=$id");
 
     if ($sql == 1) {
-      header("location:index.php");
+      header("Location:index.php");
     } else {
       echo "<div class='alert alert-danger'>Error al actualizar persona</div>";
     }
